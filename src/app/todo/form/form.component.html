@@ -1,0 +1,22 @@
+<form [formGroup]="igoForm" >
+  <br>
+  Leo: <input type="text" formControlName="leoForm" >
+  <div *ngIf="igoForm.controls.leoForm.errors?.['required']">
+    Esqueceu algo
+  </div>
+  <div *ngIf="igoForm.controls.leoForm.errors?.['minlength']">
+    Número minímo de caracteres é 5
+  </div>
+  <br>
+  Mari: <input type="text" formControlName="mariForm" >
+  <div *ngIf="igoForm.controls.mariForm.errors">
+    Esqueceu algo
+  </div>
+</form>
+<br>
+<button *ngIf="igoForm.valid">Send</button>
+<br>
+{{ igoForm.value | json }}
+<br>
+{{ igoForm.valid }}
+

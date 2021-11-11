@@ -1,10 +1,8 @@
 export interface User {
-    gender: string;
-    name: UserName;
-}
-
-export interface UserName {
-    title: string;
-    first: string;
-    last: string;
+  first: string;
+  last: string;
+  email: string;
+  address: string;
+  created: string;
+  balance: string;
 }
